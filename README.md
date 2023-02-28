@@ -33,12 +33,13 @@ It is ?mctheirs.
 This macro will create one set of pronouns, and accept only 5 arguments. 
 
 Arguments:
-* `they` : string, the subjective, like she/he/they.
-* `them` : string, the objective, like her/him/them.
-* `their` : string, the determiner, like her/his/their.
-* `theirs` : string, the possessive, like hers/his/theirs.
-* `themself` : string, the reflexive, like herself/himself/themself.
+* `they` : string. The subjective, like she/he/they.
+* `them` : string. The objective, like her/him/them.
+* `their` : string. The determiner, like her/his/their.
+* `theirs` : string. The possessive, like hers/his/theirs.
+* `themself` : string. The reflexive, like herself/himself/themself.
 * `plural` : boolean, can only be true or false. True for plural, false for singular.
 
-```<<gender "they" "them" "their" "theirs" "themself" true>>```
-```<<gender "xe" "xem" "xyr" "xyrs" "xemself" false>>```
+```<<gender "they" "them" "their" "theirs" "themself" true>>
+<<gender "xe" "xem" "xyr" "xyrs" "xemself" false>>
+```
