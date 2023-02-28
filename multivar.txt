@@ -14,6 +14,7 @@
 <<set $mc_themself to "">>
 <<set $mc_plural to false>>
 <<set $mc_is to "">>
+<<set $mc_was to "">>
 <<set $mc_s to "">>
 <<set $mc_theyre to "">>
 <<set $mc_has to "">>
