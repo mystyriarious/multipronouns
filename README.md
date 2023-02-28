@@ -58,7 +58,10 @@ Arguments:
 <<gender "xe" "xem" "xyr" "xyrs" "xemself" false>>
 ```
 
-#
+# `?mcthey, ?mcthem, ?mctheir, ?mctheirs, ?mcthemself, ?mctheyre`
+When these are referenced or used, `?mcthey` will randomly take from the sets of pronouns that were set by the `<<gender>>` macro for the player, and display them. For example, if the pronouns include she/her and they/them, then `?mcthey` will either display "she" or "they", `?mcthem` will either display "her" or "them", and so on. 
+
+The pronouns will go through a roulette each time any of these are called on. If you want to stick to the last pronoun used, use `$mc_they`, `$mc_them`, etc. See the section about them below under Story Variables.
 
 # Story Variables
 These are variables initialized in StoryInit that dynamically change, depending on what pronoun the last `?mcthey`, `?mcthem`, etc. uses.
