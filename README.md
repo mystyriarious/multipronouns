@@ -30,7 +30,7 @@ It is ?mctheirs.
 ```
 
 # `<<gender>>`
-This macro will create one set of pronouns, and accept only 5 arguments. 
+This macro will create one set of pronouns, and accept only 6 aguments in this order to function properly.
 
 Arguments:
 * `they` : string. The subjective, like she/he/they.
