@@ -22,6 +22,7 @@ Go to (link) to be able to try the demo! You can download the project iself unde
 <<gender "she" "her" "her" "hers" "herself" false>>
 
 ?mcThey $mc_is walking.
+?mcThey $mc_was walking.
 ?mcTheyre walking.
 ?mcThey walk$mc_s.
 I see ?mcthem walking.
