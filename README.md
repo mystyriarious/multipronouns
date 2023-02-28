@@ -43,6 +43,7 @@ Arguments:
 * `themself` : string. The reflexive, like herself/himself/themself.
 * `plural` : boolean, can only be true or false. True for plural, false for singular.
 
-```<<gender "they" "them" "their" "theirs" "themself" true>>
+```
+<<gender "they" "them" "their" "theirs" "themself" true>>
 <<gender "xe" "xem" "xyr" "xyrs" "xemself" false>>
 ```
