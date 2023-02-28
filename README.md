@@ -20,6 +20,7 @@ Go to (link) to be able to try the demo! You can download the project iself unde
 
 ```<<gender "they" "them" "their" "theirs" "themself" true>>
 <<gender "she" "her" "her" "hers" "herself" false>>
+<<gender "they" "them" "their" "theirs" "themself" true>>
 
 ?mcThey $mc_is walking.
 ?mcThey $mc_was walking.
