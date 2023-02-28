@@ -9,7 +9,7 @@ A macro that allows you to give the main character (MC) multiple sets of pronoun
 
 # Installation
 
-For Twine 2, copy and paste the code of `multipronouns.js` into your JavaScript.
+For Twine 2, copy and paste the code of `multipronouns.js` into your JavaScript. There is the pretty version of it, and then there's a minified version of it to save on space.
 
 Copy and paste `multivar.txt` and put into your StoryInit passage. These will initialize the variables needed for the JS code.
 
