@@ -16,7 +16,7 @@ Copy and paste `multivar.txt` and put into your StoryInit passage. These will in
 # Demo
 Go to (link) to be able to try the demo! You can download the project iself under Downloads to be able to see how it's used.
 
-# Example
+# Example Usage
 
 ```<<gender "they" "them" "their" "theirs" "themself" true>>
 <<gender "she" "her" "her" "hers" "herself" false>>
@@ -31,8 +31,18 @@ It is ?mctheirs.
 ?mcThemself.
 ```
 
+# Overview
+The ``<<gender>>`` macro is what's used to create a new set of pronouns for the MC. Refer to the section on the gender macro below.
+
+`?mcthey`, `?mcthem`, `?mctheir`, `?mctheirs`, `?mcthemself`, and `?mctheyre` will automatically randomly pick from the sets of pronouns that the player chooses that were added through the ``<<gender>>`` macro. Refer to how how to use these below.
+
+`$mc_they`, `$mc_them`, `$mc_their`, `$mc_theirs`, `$mc_themself` will display the same pronouns as the last `?mcthey`, `?mcthem`, etc. used. See the section under Story Variables below.
+
+There are also `$mc_is`, `$mc_s`, and `$mc_has` that function similarly, but they determine plurality of `?mcthey`, `?mcthem`, etc. and therefore refer to the same set of pronouns as `$mc_they`, `$mc_them`, etc.
+
 # `<<gender>>`
 Syntax: `<<gender they them their theirs themself plural>>`
+
 This macro will create one set of pronouns, and accept only 6 aguments in this order to function properly.
 
 Arguments:
@@ -47,3 +57,18 @@ Arguments:
 <<gender "they" "them" "their" "theirs" "themself" true>>
 <<gender "xe" "xem" "xyr" "xyrs" "xemself" false>>
 ```
+
+#
+
+# Story Variables
+These are variables initialized in StoryInit that dynamically change, depending on what pronoun the last `?mcthey`, `?mcthem`, etc. uses.
+
+## `$mc_they, $mc_them, $mc_their, $mc_theirs, $mc_themself, $mc_theyre`
+These variables, when referenced, display the pronouns of the last ?mcthey, ?mcthem, etc. So if the previous `?mcthey` yields they/them, then `$mc_they`, `$mc_them`, etc. uses they/them as well. 
+
+These are particularly useful when you want to use a singular pronoun consistently during dialogue or a paragraph for clarity.
+
+## `$mc_plural, $mc_is, $mc_s, mc_$has`
+Just like `$mc_they`, `$mc_them`, etc. `$mc_is`, `$mc_s` and `$mc_has` uses the last `?mc_they` (or the same pronouns as `$mc_they` and `$mc_them`) to determine if the pronouns being used are singular or plural. 
+
+If the previous `?mcthey` yields they/them, `$mc_is` will display "are", and `$mc_has` will display "have". `$mc_s` is attached to the end of a verb to make a singular verb into a plural verb, like "she runs" (singular) vs. "they run" (plural).
