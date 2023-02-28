@@ -11,6 +11,8 @@ A macro that allows you to give the main character (MC) multiple sets of pronoun
 
 For Twine 2, copy and paste the code of `multipronouns.js` into your JavaScript. For Tweego, add that file to your source folder.
 
+Use the variables in `multivar.txt` and put into your StoryInit passage.
+
 # Demo
 Go to (link) to be able to try the demo! You can download the project iself under Downloads to be able to see how it's used.
 
