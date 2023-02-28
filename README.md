@@ -71,7 +71,7 @@ These variables, when referenced, display the pronouns of the last ?mcthey, ?mct
 
 These are particularly useful when you want to use a singular pronoun consistently during dialogue or a paragraph for clarity.
 
-## `$mc_plural, $mc_is, $mc_s, mc_$has`
+## `$mc_plural, $mc_is, $mc_s, $mc_has`
 Just like `$mc_they`, `$mc_them`, etc. `$mc_is`, `$mc_s` and `$mc_has` uses the last `?mc_they` (or the same pronouns as `$mc_they` and `$mc_them`) to determine if the pronouns being used are singular or plural. 
 
 If the previous `?mcthey` yields they/them, `$mc_is` will display "are", and `$mc_has` will display "have". `$mc_s` is attached to the end of a verb to make a plural verb into a singular verb, like "they run" (plural) vs. "she runs" (plural).
