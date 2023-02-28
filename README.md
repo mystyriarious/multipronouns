@@ -61,7 +61,7 @@ Arguments:
 # `?mcthey, ?mcthem, ?mctheir, ?mctheirs, ?mcthemself, ?mctheyre`
 When these are referenced or used, `?mcthey` will randomly take from the sets of pronouns that were set by the `<<gender>>` macro for the player, and display them. For example, if the pronouns include she/her and they/them, then `?mcthey` will either display "she" or "they", `?mcthem` will either display "her" or "them", and so on. 
 
-The pronouns will go through a roulette each time any of these are called on. If you want to stick to the last pronoun used, use `$mc_they`, `$mc_them`, etc. See the section about them below under Story Variables.
+The pronouns will be randomized each time any of these are called on. If you want to stick to the last pronoun used, use `$mc_they`, `$mc_them`, etc. See the section about them below under Story Variables.
 
 # Story Variables
 These are variables initialized in StoryInit that dynamically change, depending on what pronoun the last `?mcthey`, `?mcthem`, etc. uses.
@@ -74,4 +74,4 @@ These are particularly useful when you want to use a singular pronoun consistent
 ## `$mc_plural, $mc_is, $mc_s, mc_$has`
 Just like `$mc_they`, `$mc_them`, etc. `$mc_is`, `$mc_s` and `$mc_has` uses the last `?mc_they` (or the same pronouns as `$mc_they` and `$mc_them`) to determine if the pronouns being used are singular or plural. 
 
-If the previous `?mcthey` yields they/them, `$mc_is` will display "are", and `$mc_has` will display "have". `$mc_s` is attached to the end of a verb to make a singular verb into a plural verb, like "she runs" (singular) vs. "they run" (plural).
+If the previous `?mcthey` yields they/them, `$mc_is` will display "are", and `$mc_has` will display "have". `$mc_s` is attached to the end of a verb to make a plural verb into a singular verb, like "they run" (plural) vs. "she runs" (plural).
