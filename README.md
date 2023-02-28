@@ -32,6 +32,9 @@ That is ?mctheir dog.
 It is ?mctheirs.
 ?mcThemself.
 ```
+**Example output**
+
+![Example output](https://media.discordapp.net/attachments/468549047398170636/1080222187438477493/image.png)
 
 # Overview
 The ``<<gender>>`` macro is what's used to create a new set of pronouns for the MC. [Refer to the section on the gender macro below.](https://github.com/mystyriarious/multipronouns/blob/main/README.md#gender)
