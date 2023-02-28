@@ -21,12 +21,14 @@ window.pronouns = function (i) {
     var plurality = State.variables.arr_plural[i];
   	if (plurality == true) {
       State.variables.mc_is = "are";
+      State.variables.mc_was = "were";
       State.variables.mc_s = "";
       State.variables.mc_theyre = State.variables.arr_they[i] + "\'re";
       State.variables.mc_has = "have";
     }
   	else {
       State.variables.mc_is = "is";
+      State.variables.mc_was = "was";
       State.variables.mc_s = "s";
       State.variables.mc_theyre = State.variables.arr_they[i] + "\'s";
       State.variables.mc_has = "has";
