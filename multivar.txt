@@ -1,0 +1,19 @@
+/* Multipronouns Variables*/
+<<set $prons to 0>>
+<<set $arr_they to []>>
+<<set $arr_them to []>>
+<<set $arr_their to []>>
+<<set $arr_theirs to []>>
+<<set $arr_themself to []>>
+<<set $arr_plural to []>>
+
+<<set $mc_they to "">>
+<<set $mc_them to "">>
+<<set $mc_their to "">>
+<<set $mc_theirs to "">>
+<<set $mc_themself to "">>
+<<set $mc_plural to false>>
+<<set $mc_is to "">>
+<<set $mc_s to "">>
+<<set $mc_theyre to "">>
+<<set $mc_has to "">>
