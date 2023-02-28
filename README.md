@@ -32,6 +32,7 @@ It is ?mctheirs.
 ```
 
 # `<<gender>>`
+Syntax: `<<gender they them their theirs themself plural>>
 This macro will create one set of pronouns, and accept only 6 aguments in this order to function properly.
 
 Arguments:
