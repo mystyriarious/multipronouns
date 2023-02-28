@@ -63,6 +63,8 @@ When these are referenced or used, `?mcthey` will randomly take from the sets of
 
 The pronouns will be randomized each time any of these are called on. If you want to stick to the last pronoun used, use `$mc_they`, `$mc_them`, etc. See the section about them below under Story Variables.
 
+To capitalize the first letter, use `?mcThey` (they -> They), `?mcThem` (them -> Them), `?mcTheir`, `?mcTheirs`, `?mcThemself`, and `?mcTheyre`.
+
 # Story Variables
 These are variables that change depending on what pronoun the last `?mcthey`, `?mcthem`, etc. used.
 
