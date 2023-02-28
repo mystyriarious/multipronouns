@@ -59,12 +59,12 @@ Arguments:
 ```
 
 # `?mcthey, ?mcthem, ?mctheir, ?mctheirs, ?mcthemself, ?mctheyre`
-When these are referenced or used, `?mcthey` will randomly take from the sets of pronouns that were set by the `<<gender>>` macro for the player, and display them. For example, if the pronouns include she/her and they/them, then `?mcthey` will either display "she" or "they", `?mcthem` will either display "her" or "them", and so on. 
+When these are referenced or used, `?mcthey` will randomly take from the sets of pronouns set by the `<<gender>>` macro for the player, and display them. For example, if the pronouns include she/her and they/them, then `?mcthey` will either display "she" or "they", `?mcthem` will either display "her" or "them", and so on. 
 
 The pronouns will be randomized each time any of these are called on. If you want to stick to the last pronoun used, use `$mc_they`, `$mc_them`, etc. See the section about them below under Story Variables.
 
 # Story Variables
-These are variables initialized in StoryInit that dynamically change, depending on what pronoun the last `?mcthey`, `?mcthem`, etc. uses.
+These are variables that change depending on what pronoun the last `?mcthey`, `?mcthem`, etc. used.
 
 ## `$mc_they, $mc_them, $mc_their, $mc_theirs, $mc_themself, $mc_theyre`
 These variables, when referenced, display the pronouns of the last ?mcthey, ?mcthem, etc. So if the previous `?mcthey` yields they/them, then `$mc_they`, `$mc_them`, etc. uses they/them as well. 
