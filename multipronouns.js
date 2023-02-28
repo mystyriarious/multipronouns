@@ -92,7 +92,7 @@ Template.add (['mcthemself', 'mcThemself'], function () {
   }
   else {
 	var themself = either(State.variables.arr_themself);
-    var i = State.variables.arr_theirs.indexOf(themself);
+    var i = State.variables.arr_themself.indexOf(themself);
     window.pronouns(i);
 	return this.name === 'mcThemself' ? themself.toUpperFirst() : themself;
   }
