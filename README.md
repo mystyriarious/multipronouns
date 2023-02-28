@@ -29,7 +29,7 @@ It is ?mctheirs.
 ?mcThemself.
 ```
 
-# <<gender>>
+# `<<gender>>`
 This macro will create one set of pronouns, and accept only 5 arguments. 
 
 Arguments:
