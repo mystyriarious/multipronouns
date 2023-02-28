@@ -83,4 +83,4 @@ If the previous `?mcthey` yields they/them, `$mc_is` will display "are", and `$m
 
 To capitalize the first letter, use <<print $mc_is.toUpperFirst()>>, <<print $mc_has.toUpperFirst()>>, and so on.
 
-If you're using past tense, you can use $mc_was instead of $mc_is.
+If you're using past tense, you can use `$mc_was` instead of `$mc_is`.
