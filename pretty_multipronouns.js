@@ -54,6 +54,8 @@ window.pronouns = function (i) {
       State.variables.mc_is = "are";
       State.variables.mc_was = "were";
       State.variables.mc_s = "";
+      State.variables.mc_es = "";
+      State.variables.mc_ies = "y";
       State.variables.mc_theyre = State.variables.arr_they[i] + "\'re";
       State.variables.mc_has = "have";
     }
@@ -61,6 +63,8 @@ window.pronouns = function (i) {
       State.variables.mc_is = "is";
       State.variables.mc_was = "was";
       State.variables.mc_s = "s";
+      State.variables.mc_es = "es";
+      State.variables.mc_ies = "ies";
       State.variables.mc_theyre = State.variables.arr_they[i] + "\'s";
       State.variables.mc_has = "has";
     }
