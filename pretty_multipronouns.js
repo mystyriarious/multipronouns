@@ -2,13 +2,16 @@ Macro.add("gender", {
   skipArgs : false,
   handler : function() {
     if (this.args.length > 5) {
-    State.variables.arr_they.push(this.args[0]);
-    State.variables.arr_them.push(this.args[1]);
-    State.variables.arr_their.push(this.args[2]);
-    State.variables.arr_theirs.push(this.args[3]);
-    State.variables.arr_themself.push(this.args[4]);
-    State.variables.arr_plural.push(this.args[5]);
-    State.variables.prons += 1;
+      let plurality = this.args[5] ? "plural" : "singular";
+      let pron_set = this.args[0] + '/' + this.args[1] + '/' + this.args[2] + '/' + this.args[3] + '/' + this.args[4] + ' (' + plurality + ')';
+      State.variables.arr_pronouns.push(pron_set);
+      State.variables.arr_they.push(this.args[0]);
+      State.variables.arr_them.push(this.args[1]);
+      State.variables.arr_their.push(this.args[2]);
+      State.variables.arr_theirs.push(this.args[3]);
+      State.variables.arr_themself.push(this.args[4]);
+      State.variables.arr_plural.push(this.args[5]);
+      State.variables.prons += 1;
     }
     else {
       return this.error('Not enough arguments to set gender');
@@ -20,8 +23,9 @@ Macro.add("removeGender", {
   skipArgs : false,
   handler : function() {
     if (this.args.length == 1 && State.variables.prons > 0) {
-      let index = State.variables.arr_they.indexOf(this.args[0]);
+      let index = State.variables.arr_pronouns.indexOf(this.args[0]);
       if (index > -1) {
+        State.variables.arr_pronouns.splice(index, 1);
         State.variables.arr_they.splice(index, 1);
         State.variables.arr_them.splice(index, 1);
         State.variables.arr_their.splice(index, 1);
