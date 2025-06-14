@@ -16,5 +16,10 @@
 <<set $mc_is to "">>
 <<set $mc_was to "">>
 <<set $mc_s to "">>
+<<set $mc_es to "">>
+<<set $mc_ies to "">>
 <<set $mc_theyre to "">>
 <<set $mc_has to "">>
+
+/* Variable to keep track of pronoun to remove; you can change the name of this variable */
+<<set $gender_remove to "">>
