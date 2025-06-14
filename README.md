@@ -17,7 +17,7 @@ For Twine 2, copy and paste the code of `multipronouns.js` into your JavaScript.
 Copy and paste `multivar.txt` and put into your StoryInit passage. These will initialize the variables needed for the JS code.
 
 # Demo
-Go to (link) to be able to try the demo! You can download the project iself under Downloads to be able to see how it's used.
+Go [here](https://mistyriousness.itch.io/multipronouns) to be able to try the demo! You can download the project iself under Downloads to be able to see how it's used.
 
 # Example Usage
 
@@ -70,6 +70,22 @@ A set of pronouns will be made:
 * `$mc_s`, `$mc_es`, and `$mc_ies` are used to suffix verbs accordingly if they are singular or plural. For example, walk -> walks (`$mc_s`), watch -> watches (`$mc_es`), and study -> studies (`$mc_ies`).
 * You can switch between past and present tense using $mc_is vs. $mc_was.
 * You can switch between has (singular) vs. have (plural) using $mc_has.
+
+# `<<removeGender>>`
+Syntax: `<<removeGender they>>`
+
+Argument: `they`, string. MUST be an element from the array variable `$arr_they`.
+
+This macro will remove a set of pronouns and all the pronouns associated with it. This means if `<<removeGender "they">` was run, the entire set of pronouns — they/them/their/theirs/themself — will be deleted.
+
+**Warning:** If for some reason a set of pronouns has a same "they" but vary in them/their/theirs/themself, this macro will delete the FIRST instance of "they" and their associated pronouns from the list of pronouns.
+
+For example, the player has the following set of pronouns:
+
+* they/fem/faer/faers/faeself
+* they/them/their/theirs/themself
+
+With the first set of pronouns being added first, then when <<removeGender "they">> is run, then it will delete they/fem/faer/faers/faeself, NOT they/them/their/theirs/themself.
 
 # `?mcthey, ?mcthem, ?mctheir, ?mctheirs, ?mcthemself, ?mctheyre`
 When these are referenced or used, `?mcthey` will randomly take from the sets of pronouns set by the `<<gender>>` macro for the player, and display them. For example, if the pronouns include she/her and they/them, then `?mcthey` will either display "she" or "they", `?mcthem` will either display "her" or "them", and so on. 
