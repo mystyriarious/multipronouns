@@ -1,5 +1,6 @@
 /* Multipronouns Variables*/
 <<set $prons to 0>>
+<<set $arr_pronouns to []>>
 <<set $arr_they to []>>
 <<set $arr_them to []>>
 <<set $arr_their to []>>
