@@ -1,6 +1,6 @@
 Macro.add("gender", {
   skipArgs : false,
-  handler : function(they, them, their, theirs, themself, is) {
+  handler : function() {
     if (this.args.length > 5) {
     State.variables.arr_they.push(this.args[0]);
     State.variables.arr_them.push(this.args[1]);
@@ -12,6 +12,37 @@ Macro.add("gender", {
     }
     else {
       return this.error('Not enough arguments to set gender');
+    }
+  }
+});
+
+Macro.add("removeGender", {
+  skipArgs : false,
+  handler : function() {
+    if (this.args.length == 1 && State.variables.prons > 0) {
+      let index = State.variables.arr_they.indexOf(this.args[0]);
+      if (index > -1) {
+        State.variables.arr_they.splice(index, 1);
+        State.variables.arr_them.splice(index, 1);
+        State.variables.arr_their.splice(index, 1);
+        State.variables.arr_theirs.splice(index, 1);
+        State.variables.arr_themself.splice(index, 1);
+        State.variables.arr_plural.splice(index, 1);
+        State.variables.prons -= 1;
+      }
+      else {
+        return this.error("Pronouns not found");
+      }
+      
+    }
+    else if (State.variables.prons <= 0) {
+      return this.error("No pronouns to remove");
+    }
+    else if (this.args.length > 1) {
+      return this.error("Too many arguments");
+    }
+    else {
+      return this.error("Too little arguments");
     }
   }
 });
