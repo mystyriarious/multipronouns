@@ -6,6 +6,9 @@ A macro that allows you to give the main character (MC) multiple sets of pronoun
 * Pronouns can be completely customizable and have plurality
 * Recognizes when to use singular vs. plural
 * Can temporarily consistently use one pronoun, useful when a character is talking about the MC in one breath
+* **(New)** Ability to remove pronouns
+
+**Important Update 6/13/2025**: If you used the old code before this date and would like the ability to remove pronouns + use additional -es and -ies suffixes for verbs, you will need to re-copy the JS and the state variables for your StoryInit again. This should not disturb anything as all changes are additive.
 
 # Installation
 
@@ -26,15 +29,14 @@ Go to (link) to be able to try the demo! You can download the project iself unde
 ?mcThey $mc_was walking.
 ?mcTheyre walking.
 ?mcThey walk$mc_s.
+?mcThey stud$mc_ies hard.
+?mcThey watch$mc_es the TV.
 I see ?mcthem walking.
 That is ?mctheir dog.
 ?mcThey $mc_has a dog.
 It is ?mctheirs.
 ?mcThemself.
 ```
-**Example output**
-
-![Example output](https://media.discordapp.net/attachments/468549047398170636/1080222187438477493/image.png)
 
 # Overview
 The ``<<gender>>`` macro is what's used to create a new set of pronouns for the MC. [Refer to the section on the gender macro below.](https://github.com/mystyriarious/multipronouns/blob/main/README.md#gender)
@@ -62,6 +64,12 @@ Arguments:
 <<gender "they" "them" "their" "theirs" "themself" true>>
 <<gender "xe" "xem" "xyr" "xyrs" "xemself" false>>
 ```
+
+A set of pronouns will be made:
+* they/them/theirs/theirs/themself will be made.
+* `$mc_s`, `$mc_es`, and `$mc_ies` are used to suffix verbs accordingly if they are singular or plural. For example, walk -> walks (`$mc_s`), watch -> watches (`$mc_es`), and study -> studies (`$mc_ies`).
+* You can switch between past and present tense using $mc_is vs. $mc_was.
+* You can switch between has (singular) vs. have (plural) using $mc_has.
 
 # `?mcthey, ?mcthem, ?mctheir, ?mctheirs, ?mcthemself, ?mctheyre`
 When these are referenced or used, `?mcthey` will randomly take from the sets of pronouns set by the `<<gender>>` macro for the player, and display them. For example, if the pronouns include she/her and they/them, then `?mcthey` will either display "she" or "they", `?mcthem` will either display "her" or "them", and so on. 
