@@ -39,13 +39,13 @@ It is ?mctheirs.
 ```
 
 # Overview
-The ``<<gender>>`` macro is what's used to create a new set of pronouns for the MC. [Refer to the section on the gender macro below.](https://github.com/mystyriarious/multipronouns/blob/main/README.md#gender)
+The ``<<gender>>`` macro is what's used to create a new set of pronouns for the MC. [Refer to the section on the gender macro below.](https://github.com/mystyriarious/multipronouns/blob/main/README.md#gender) Once you add them, you can delete them using the ``<<removeGender>>`` macro, [which you can refer to here](https://github.com/mystyriarious/multipronouns/blob/main/README.md#removeGender).
 
 `?mcthey`, `?mcthem`, `?mctheir`, `?mctheirs`, `?mcthemself`, and `?mctheyre` will automatically randomly pick from the sets of pronouns that the player chooses that were added through the ``<<gender>>`` macro. [Refer to how how to use these below.]([https://github.com/mystyriarious/multipronouns/blob/main/README.md#gender](https://github.com/mystyriarious/multipronouns/blob/main/README.md#mcthey-mcthem-mctheir-mctheirs-mcthemself-mctheyre))
 
 `$mc_they`, `$mc_them`, `$mc_their`, `$mc_theirs`, `$mc_themself` will display the same pronouns as the last `?mcthey`, `?mcthem`, etc. used. [See the section under Story Variables below.](https://github.com/mystyriarious/multipronouns/blob/main/README.md#mcthey-mcthem-mctheir-mctheirs-mcthemself-mctheyre)
 
-There are also `$mc_is`, `$mc_s`, and `$mc_has` that function similarly, but they determine plurality of `?mcthey`, `?mcthem`, etc. and therefore refer to the same set of pronouns as `$mc_they`, `$mc_them`, etc.
+There are also `$mc_is`, `$mc_s`, and `$mc_has` that function similarly, but they determine plurality of `?mcthey`, `?mcthem`, etc. and therefore refer to the same set of pronouns as `$mc_they`, `$mc_them`, etc. There is also `$mc_es` and `$mc_ies` depending on the verb, as well as `$mc_was` if using past tense.
 
 # `<<gender>>`
 Syntax: `<<gender [they] [them] [their] [theirs] [themself] [plural]>>`
@@ -125,4 +125,4 @@ If the previous `?mcthey` yields they/them, `$mc_is` will display "are", and `$m
 
 To capitalize the first letter, use <<print $mc_is.toUpperFirst()>>, <<print $mc_has.toUpperFirst()>>, and so on.
 
-If you're using past tense, you can use `$mc_was` instead of `$mc_is`.
+If you're using past tense, you can use `$mc_was` instead of `$mc_is`. If the verb cannot be added an "s" at the end simply to make it singular, try `$mc_es` and `$mc_ies`.
