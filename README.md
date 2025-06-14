@@ -48,7 +48,7 @@ The ``<<gender>>`` macro is what's used to create a new set of pronouns for the 
 There are also `$mc_is`, `$mc_s`, and `$mc_has` that function similarly, but they determine plurality of `?mcthey`, `?mcthem`, etc. and therefore refer to the same set of pronouns as `$mc_they`, `$mc_them`, etc.
 
 # `<<gender>>`
-Syntax: `<<gender they them their theirs themself plural>>`
+Syntax: `<<gender [they] [them] [their] [theirs] [themself] [plural]>>`
 
 This macro will create one set of pronouns, and accept only 6 aguments in this order to function properly.
 
@@ -72,20 +72,34 @@ A set of pronouns will be made:
 * You can switch between has (singular) vs. have (plural) using $mc_has.
 
 # `<<removeGender>>`
-Syntax: `<<removeGender they>>`
+Syntax: `<<removeGender [pronoun]>>`
 
-Argument: `they`, string. MUST be an element from the array variable `$arr_they`.
+Argument: `[pronoun]`, string. MUST be an element from the array variable `$arr_pronouns`.
 
-This macro will remove a set of pronouns and all the pronouns associated with it. This means if `<<removeGender "they">` was run, the entire set of pronouns — they/them/their/theirs/themself — will be deleted.
-
-**Warning:** If for some reason a set of pronouns has a same "they" but vary in them/their/theirs/themself, this macro will delete the FIRST instance of "they" and their associated pronouns from the list of pronouns.
+When a set of pronouns is created, a descriptive string is generated. For example, when a player creates a set of pronouns with they/them/their/theirs/themself, the string `they/them/their/theirs/themself (plural)` will be created and added to the array `$arr_pronouns`. This "uniquely" identifies a set of pronouns and sets them apart in a niche case as below:
 
 For example, the player has the following set of pronouns:
 
 * they/fem/faer/faers/faeself
 * they/them/their/theirs/themself
 
-With the first set of pronouns being added first, then when <<removeGender "they">> is run, then it will delete they/fem/faer/faers/faeself, NOT they/them/their/theirs/themself.
+Even though both pronouns use "they", they should still be distinguished from each other, hence the need to identify them apart. However, when an identical set of pronouns are created, the first added to the list of pronouns will be deleted.
+
+If you want to let the player decide what set of pronouns to remove, we recommend using SugarCube's dropdown macro, `<<listbox>>`, like so:
+
+```
+<<if $arr_pronouns.length gt 0>>
+Select a pronoun to remove from MC.
+
+<<listbox "$gender_remove" autoselect>>
+	<<optionsfrom $arr_pronouns>>
+<</listbox>>
+
+<<link "Remove">><<removeGender $gender_remove>><</link>>
+<</if>>
+```
+
+If there is an existing list of pronouns, there is an option to remove from the list. The listbox will set the variable, `$gender_remove` to whatever the player selects from `$arr_pronouns`. This variable can then be used in `<<removeGender>>`. If there are no pronouns in the list, the macro will throw an error. If the pronoun cannot be found, the macro will also throw an error.
 
 # `?mcthey, ?mcthem, ?mctheir, ?mctheirs, ?mcthemself, ?mctheyre`
 When these are referenced or used, `?mcthey` will randomly take from the sets of pronouns set by the `<<gender>>` macro for the player, and display them. For example, if the pronouns include she/her and they/them, then `?mcthey` will either display "she" or "they", `?mcthem` will either display "her" or "them", and so on. 
